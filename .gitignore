@@ -1,0 +1,43 @@
+# Python & Virtual Environments
+venv/
+**/venv/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment Variables (Keep API keys private)
+.env
+**/.env
+.env*.local
+
+# Node & Dependencies
+node_modules/
+**/node_modules/
+npm-debug.*
+yarn-debug.*
+yarn-error.*
+
+# Expo & React Native
+.expo/
+dist/
+web-build/
+*.tsbuildinfo
+
+# Android Build Outputs & Gradle Cache
+.gradle/
+**/android/.gradle/
+**/android/app/build/
+**/android/.cxx/
+**/android/build/
+local.properties
+*.apk
+*.aab
+*.jks
+*.keystore
+
+# Operating System & IDEs
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
