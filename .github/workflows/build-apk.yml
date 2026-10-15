@@ -45,16 +45,16 @@ jobs:
         run: |
           npx expo prebuild --platform android --clean --no-install
 
-      - name: 7. Build Debug APK with Gradle
+      - name: 7. Build Standalone Release APK with Gradle
         working-directory: ./mobile/android
         run: |
           chmod +x gradlew
-          ./gradlew assembleDebug --no-daemon --stacktrace
+          ./gradlew assembleRelease --no-daemon --stacktrace
 
       - name: 8. Upload APK to GitHub Artifacts
         uses: actions/upload-artifact@v4
         with:
-          name: travel-guide-app-debug-apk
-          path: mobile/android/app/build/outputs/apk/debug/*.apk
+          name: travel-guide-app-standalone-apk
+          path: mobile/android/app/build/outputs/apk/release/*.apk
           if-no-files-found: error
           retention-days: 14
